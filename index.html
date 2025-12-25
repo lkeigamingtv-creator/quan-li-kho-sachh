@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Kho Sách</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-10 font-sans">
+
+    <div class="max-w-6xl mx-auto bg-white p-8 shadow-md rounded-lg">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">QUẢN LÝ KHO SÁCH</h1>
+
+        <div class="grid grid-cols-5 gap-3 mb-6">
+            <input id="masach" type="text" placeholder="Mã sách(VD: S01)" class="border p-2 rounded">
+            <input id="tensach" type="text" placeholder="Tên sách(VD:Tây Du Ký)" class="border p-2 rounded">
+            <input id="tacgia" type="text" placeholder="Tác giả(Nguyễn Văn A)" class ="border p-2 rounded">
+            <input id="namxb" type="number" placeholder="Năm XB(VD:2030)" class="border p-2 rounded">
+            <input id="giasach" type="number" placeholder="Giá tiền(VD:130000VND)" class="border p-2 rounded">
+        </div>
+        
+        <button onclick="themsach()" class="w-full bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-700 mb-8">
+            THÊM SÁCH
+        </button>
+
+        <div class="mb-4 relative">
+    <input 
+        id="tukhoatimkiem" 
+        onkeyup="timkiem()" 
+        type="text" 
+        placeholder="Gõ tên sách hoặc mã sách để tìm..." 
+        class="w-full border-2 border-blue-200 p-2 pl-10 rounded-lg outline-none focus:border-blue-500"
+    >
+    <div class="absolute left-3 top-3 text-gray-400">🔍</div>
+</div>
+
+        <table class="w-full border-collapse border border-gray-300">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="border p-3">STT</th>
+                    <th class="border p-3 text-left">Mã Sách</th>
+                    <th class="border p-3 text-left">Tên Sách</th>
+                    <th class="border p-3 text-left">Tác Giả</th>
+                    <th class="border p-3 text-center">Năm</th>
+                    <th class="border p-3 text-right">Giá</th>
+                    <th class="border p-3 text-center">Xóa</th>
+                </tr>
+            </thead>
+            <tbody id="noihienthi">
+                </tbody>
+        </table>
+        
+        <p id="thongke" class="mt-4 text-right font-bold text-gray-700"></p>
+    </div>
+
+    <script src="baitap.js"></script>
+</body>
+</html>
